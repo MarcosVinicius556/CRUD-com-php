@@ -3,15 +3,15 @@
 
     <?php 
         include('./controller/cliente-controller.php');
-        $cliente = findById($_REQUEST['id']);
+        $cliente = findById($_REQUEST['codigo']);
     ?>
 
     <form action="?page=cliente-controller" method="POST">
     <input type="hidden" name="acao" value="editar"> 
-  <input type="hidden" name="id" value="<?php print $cliente->codigo; ?>"> 
+  <input type="hidden" name="inputCodigo" value="<?php print $cliente->codigo; ?>"> 
     <div class="mb-3">
         <label for="inputNome">Nome</label>
-        <input type="text" name="inputNome" value="<?php print $cliente->nome; ?>" class="form-control">
+        <input type="text" name="inputNome" value="<?php print $cliente->nome; ?>" class="form-control" required>
     </div>
     <div class="mb-3">
         <label for="inputEmail">E-mail</label>
@@ -19,7 +19,7 @@
     </div>
     <div class="mb-3">
         <label for="inputSenha">Cpf</label>
-        <input type="text" name="inputCpf" value="<?php print $cliente->cpf; ?>" class="form-control">
+        <input type="text" name="inputCpf" value="<?php print $cliente->cpf; ?>" class="form-control" required>
     </div>
     <div class="mb-3">
         <label for="inputTelefone">Telefone</label>
@@ -27,7 +27,7 @@
     </div>
     <div class="mb-3">
         <label for="inputDataNasc">Data de Nascimento</label>
-        <input type="date" name="inputDataNasc" value="<?php print $cliente->data_nascimento; ?>" class="form-control">
+        <input type="date" name="inputDataNasc" value="<?php print $cliente->data_nascimento; ?>" class="form-control" required>
     </div>
     <div class="mb-3">
         <button type="submit" class="btn btn-primary"> 

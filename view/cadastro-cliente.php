@@ -4,7 +4,7 @@
     <input type="hidden" name="acao" value="cadastrar">  <!-- Esconde a URL -->
     <div class="mb-3">
         <label for="inputNome">Nome</label>
-        <input type="text" name="inputNome" class="form-control">
+        <input type="text" name="inputNome" class="form-control" required>
     </div>
     <div class="mb-3">
         <label for="inputEmail">E-mail</label>
@@ -12,7 +12,7 @@
     </div>
     <div class="mb-3">
         <label for="inputSenha">Cpf</label>
-        <input type="text" name="inputCpf" class="form-control">
+        <input type="text" name="inputCpf" class="form-control" required>
     </div>
     <div class="mb-3">
         <label for="inputTelefone">Telefone</label>
@@ -20,7 +20,7 @@
     </div>
     <div class="mb-3">
         <label for="inputDataNasc">Data de Nascimento</label>
-        <input type="date" name="inputDataNasc" class="form-control">
+        <input type="date" name="inputDataNasc" class="form-control" required>
     </div>
     <div class="mb-3">
         <button type="submit" class="btn btn-primary"> 

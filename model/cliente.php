@@ -14,6 +14,18 @@
         return $cliente->fetch_object();
     }
 
+    /**
+     * Se possuir um cliente com o mesmo cpf existente
+     * no banco retorna true
+     */
+    function cpfExists($cpf){
+        include('./model/config.php');
+        $query_cpf = 'SELECT * FROM cliente WHERE cpf = '.$cpf;
+
+        $res = $conn->query($query_cpf);
+        return $res->num_rows > 0;
+    }
+
     function save($nome, $email, $cpf, $tel, $data_nasc){
         include('./model/config.php');
         $sql_insert = "INSERT INTO

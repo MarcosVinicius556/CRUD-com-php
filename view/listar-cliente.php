@@ -24,7 +24,7 @@ if($clientes->num_rows > 0){
             print '<td>'.$cliente->telefone.'</td>';
             print '<td>'.$cliente->email.'</td>';
             print "<td>
-                    <button class='btn btn-success' onClick=\"location.href='?page=editar-view&id=".$cliente->codigo."';\">Editar</button>
+                    <button class='btn btn-success' onClick=\"location.href='?page=editar-view&codigo=".$cliente->codigo."';\">Editar</button>
                     <button class='btn btn-danger' onClick=\"if( confirm('Tem certeza que deseja excluir? '))
                                                             { location.href='?page=cliente-controller&acao=excluir&id=".$cliente->codigo."';} \"
                                                             else 
