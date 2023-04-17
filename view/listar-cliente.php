@@ -26,7 +26,7 @@ if($clientes->num_rows > 0){
             print "<td>
                     <button class='btn btn-success' onClick=\"location.href='?page=editar-view&codigo=".$cliente->codigo."';\">Editar</button>
                     <button class='btn btn-danger' onClick=\"if( confirm('Tem certeza que deseja excluir? '))
-                                                            { location.href='?page=cliente-controller&acao=excluir&id=".$cliente->codigo."';} \"
+                                                            { location.href='?page=cliente-controller&acao=excluir&codigo=".$cliente->codigo."';} \"
                                                             else 
                                                             { false; }\">Excluir</button>
                    </td>";

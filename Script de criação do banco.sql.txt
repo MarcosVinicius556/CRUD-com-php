@@ -5,7 +5,7 @@ CREATE TABLE cliente (
 codigo int PRIMARY KEY AUTO_INCREMENT,
 nome varchar(64) NOT NULL,
 data_nascimento date NOT NULL,
-cpf varchar(13) NOT NULL UNIQUE,
-telefone varchar(15),
+cpf varchar(20) NOT NULL UNIQUE,
+telefone varchar(20),
 email varchar(64)
 );

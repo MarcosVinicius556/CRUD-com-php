@@ -20,7 +20,7 @@
      */
     function cpfExists($cpf){
         include('./model/config.php');
-        $query_cpf = 'SELECT * FROM cliente WHERE cpf = '.$cpf;
+        $query_cpf = "SELECT * FROM cliente WHERE cpf = '".$cpf."'";
 
         $res = $conn->query($query_cpf);
         return $res->num_rows > 0;
